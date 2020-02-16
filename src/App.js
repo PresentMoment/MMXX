@@ -13,9 +13,9 @@ import Exhibitions from "./Exhibitions";
 function App() {
   return (
     <div>
-      <Router>
+      <Router basename="MMXX">
         <Navbar bg="white" expand="lg">
-          <Navbar.Brand href="/">MMXX</Navbar.Brand>
+          <Navbar.Brand href="/MMXX">MMXX</Navbar.Brand>
           <Navbar.Toggle aria-controls="basic-navbar-nav" />
           <Navbar.Collapse id="basic-navbar-nav">
             <Nav className="mr-auto">
@@ -26,13 +26,25 @@ function App() {
                 Contact
               </Nav.Link>
               <NavDropdown title="Exhibitions" id="basic-nav-dropdown">
-                <NavDropdown.Item href="/exhibition1">
+                <NavDropdown.Item
+                  href="/exhibition1"
+                  as={Link}
+                  to="/exhibition1"
+                >
                   Exhibition 1
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/exhibition2">
+                <NavDropdown.Item
+                  href="/exhibition2"
+                  as={Link}
+                  to="/exhibition2"
+                >
                   Exhibition 2
                 </NavDropdown.Item>
-                <NavDropdown.Item href="/exhibition3">
+                <NavDropdown.Item
+                  href="/exhibition3"
+                  as={Link}
+                  to="/exhibition3"
+                >
                   Exhibition 3
                 </NavDropdown.Item>
               </NavDropdown>

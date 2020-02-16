@@ -1,7 +1,14 @@
-import React from "react";
+import React, { useState } from "react";
 import Dropdown from "react-bootstrap/Dropdown";
+import Lightbox from "react-image-lightbox";
+
+import "react-image-lightbox/style.css";
+
+import emma from "./assets/emma.jpg";
 
 function Exhibitions(props) {
+  const [isOpen, setOpen] = useState(false);
+
   return (
     <div className="content">
       <p>{props.title}</p>
@@ -38,7 +45,26 @@ function Exhibitions(props) {
         </Dropdown.Menu>
       </Dropdown>
       <br />
-      <p>IMAGES</p>
+      <img
+        src={emma}
+        className="imgSmall"
+        alt="Skin like Jesus"
+        onClick={() => {
+          setOpen(true);
+        }}
+      />
+      {isOpen && (
+        <Lightbox
+          mainSrc={emma}
+          mainSrcThumbnail={emma}
+          imageCaption="Skin like Jesus"
+          enableZoom={false}
+          imagePadding={50}
+          onCloseRequest={() => {
+            setOpen(false);
+          }}
+        />
+      )}
     </div>
   );
 }

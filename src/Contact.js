@@ -19,7 +19,7 @@ function Contact() {
           <Form.Control type="email" placeholder="Enter email" />
           <Form.Text className="text-muted"></Form.Text>
         </Form.Group>
-        <Button variant="primary" type="submit">
+        <Button className="submit" variant="primary" type="submit">
           Submit
         </Button>
       </Form>

@@ -1,19 +1,29 @@
 .press {
-  background-color: lightgray;
+  background-color: transparent;
   border: none;
   border-radius: 0;
+  color: #000;
+  padding: none;
 }
 
 .press:focus {
-  background-color: lightgray !important;
+  background-color: transparent !important;
   border: none !important;
   box-shadow: none !important;
+  color: #000 !important;
+  padding: none !important;
 }
 
 .press:hover {
-  background-color: lightgray !important;
+  background-color: transparent !important;
   border: none !important;
   box-shadow: none !important;
+  color: #000 !important;
+  padding: none !important;
+}
+
+.btn {
+  padding: 0;
 }
 
 .content {
@@ -29,11 +39,35 @@
 }
 
 .btn-primary {
+  background-color: transparent;
+  border: none;
+}
+
+.submit {
   background-color: lightgrey;
   border: none;
+  padding: 0.5rem 0.8rem;
 }
 
 .btn-success:active {
   background-color: lightgrey !important;
   border: none;
+}
+
+.imgSmall {
+  width: 25vw;
+}
+
+.ril__toolbar {
+  visibility: hidden !important;
+}
+
+.ReactModal__Overlay {
+  top: 56px !important;
+}
+.ReactModal__Overlay--after-open {
+  top: 56px !important;
+}
+.ril_outer {
+  padding-top: 56px !important;
 }
