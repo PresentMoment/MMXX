@@ -1,7 +1,5 @@
 import React from "react";
 
-import logo from "./assets/mmxx_logo.png";
-
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 
 function Contact() {
