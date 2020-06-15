@@ -5,7 +5,6 @@ import MailchimpSubscribe from "react-mailchimp-subscribe";
 function Contact() {
   return (
     <div className="content">
-      <span style={{ height: "2rem" }} />
       <p>
         <span style={{ height: "1rem" }} />
         <span /> MMXX
