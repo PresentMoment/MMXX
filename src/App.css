@@ -1,3 +1,9 @@
+body {
+  font-family: Helvetica, Arial, sans-serif;
+  font-size: 12px;
+  padding-top: 6vh;
+}
+
 .press {
   background-color: transparent;
   border: none;
@@ -27,15 +33,35 @@
 }
 
 .content {
-  padding: 3rem 1rem;
+  padding: 3rem 5vw;
 }
 
 .content span {
   display: block;
 }
 
+.content a {
+  text-decoration: none !important;
+  color: #000 !important;
+}
+
 .form-group {
-  width: 30%;
+  width: 25%;
+}
+@media only screen and (max-width: 600px) {
+  .form-group {
+    width: 50%;
+  }
+}
+
+.form-control {
+  border-radius: 0 !important;
+  color: #000 !important;
+  border-color: #000 !important;
+}
+.form-control:focus {
+  border-color: #000 !important;
+  box-shadow: none !important;
 }
 
 .btn-primary {
@@ -58,16 +84,48 @@
   width: 25vw;
 }
 
-.ril__toolbar {
-  visibility: hidden !important;
-}
-
 .ReactModal__Overlay {
   top: 56px !important;
 }
 .ReactModal__Overlay--after-open {
   top: 56px !important;
 }
-.ril_outer {
-  padding-top: 56px !important;
+
+.dropdown-toggle:after {
+  display: none;
+}
+
+.navbar-nav .nav-link {
+  padding-right: 0 !important;
+  color: #000 !important;
+}
+
+.navbar {
+  padding-left: 5vw;
+}
+
+.navbar-brand {
+  font-size: 1em;
+  margin-right: 0 !important;
+  padding-top: 0.2125rem !important;
+  padding-bottom: 0.5565rem !important;
+}
+
+.navbar-toggler {
+  border-radius: 0 !important;
+}
+
+.navigation {
+  padding-left: 5vw;
+  width: 188px;
+  display: inline-flex;
+}
+
+.navigation a {
+  text-decoration: none !important;
+  color: #000 !important;
+}
+
+.navSpacer {
+  width: 2vw;
 }

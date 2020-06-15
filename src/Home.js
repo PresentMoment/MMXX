@@ -1,11 +1,12 @@
 import React from "react";
+import { Link } from "react-router-dom";
 
 function Home() {
   return (
     <div className="content">
-      <h1>MMXX</h1>
-      <br />
-      <p>current show</p>
+      <Link to="/zuccheri">
+        <p>Luigi Zuccheri 25.06 - 30.09.2020</p>
+      </Link>
     </div>
   );
 }
