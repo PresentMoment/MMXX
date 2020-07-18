@@ -4,9 +4,9 @@ import ImageGallery from "react-image-gallery";
 
 import { Document, Page, pdfjs } from "react-pdf";
 
-import engPdf from "./assets/pr_eng.pdf";
-import itPdf from "./assets/pr_it.pdf";
-import checklist from "./assets/checklist.pdf";
+import engPdf from "./assets/shows/zuccheri/pr_eng.pdf";
+import itPdf from "./assets/shows/zuccheri/pr_it.pdf";
+import checklist from "./assets/shows/zuccheri/checklist.pdf";
 
 import "./Styles/GalleryStyle.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
@@ -52,15 +52,15 @@ class Zuccheri extends Component {
 
     for (let i = 0; i < exhibit.length; i++) {
       exhibit[i] = {
-        original: `/shows/zuccheri/exhibit/web/${i}.jpg`,
-        thumbnail: `/shows/zuccheri/exhibit/thumb/${i}.jpg`,
+        original: `./assets/shows/zuccheri/exhibit/web/${i}.jpg`,
+        thumbnail: `./assets/shows/zuccheri/exhibit/thumb/${i}.jpg`,
       };
     }
 
     for (let i = 0; i < singleworks.length; i++) {
       singleworks[i] = {
-        original: `/shows/zuccheri/singleworks/web/${i}.jpg`,
-        thumbnail: `/shows/zuccheri/singleworks/thumb/${i}.jpg`,
+        original: `./assets/shows/zuccheri/singleworks/web/${i}.jpg`,
+        thumbnail: `./assets/shows/zuccheri/singleworks/thumb/${i}.jpg`,
       };
     }
     return (
