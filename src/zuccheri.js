@@ -52,15 +52,15 @@ class Zuccheri extends Component {
 
     for (let i = 0; i < exhibit.length; i++) {
       exhibit[i] = {
-        original: `/shows/zuccheri/exhibit/web/${i}.jpg`,
-        thumbnail: `/shows/zuccheri/exhibit/thumb/${i}.jpg`,
+        original: `./shows/zuccheri/exhibit/web/${i}.jpg`,
+        thumbnail: `./shows/zuccheri/exhibit/thumb/${i}.jpg`,
       };
     }
 
     for (let i = 0; i < singleworks.length; i++) {
       singleworks[i] = {
-        original: `/shows/zuccheri/singleworks/web/${i}.jpg`,
-        thumbnail: `/shows/zuccheri/singleworks/thumb/${i}.jpg`,
+        original: `./shows/zuccheri/singleworks/web/${i}.jpg`,
+        thumbnail: `./shows/zuccheri/singleworks/thumb/${i}.jpg`,
       };
     }
     return (
