@@ -7,6 +7,7 @@ import "./App.css";
 import Home from "./Home";
 import Contact from "./Contact";
 import Exhibitions from "./Exhibitions";
+import Zuccheri from "./zuccheri";
 
 function App() {
   return (
@@ -30,7 +31,7 @@ function App() {
             <Contact />
           </Route>
           <Route path="/zuccheri">
-            <Exhibitions title={"Luigi Zuccheri 25.06 - 30.09.2020"} />
+            <Zuccheri title={"Luigi Zuccheri 25.06 - 30.09.2020"} />
           </Route>
           <Route path="/exhibition2">
             <Exhibitions title={"Exhibition 2"} />
