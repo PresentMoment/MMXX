@@ -66,7 +66,9 @@ class Zuccheri extends Component {
     return (
       <div className="content">
         <p>{this.props.title}</p>
-        <p onClick={() => this.handleClick("Exhibit")}>Exhibit Photos</p>
+        <p onClick={() => this.handleClick("Exhibit")} className="exhibitItems">
+          Exhibit Photos
+        </p>
         {this.state.showExhibit ? (
           <div>
             <ImageGallery
@@ -81,7 +83,9 @@ class Zuccheri extends Component {
             />
           </div>
         ) : null}
-        <p onClick={() => this.handleClick("Singles")}>Single Photos</p>
+        <p onClick={() => this.handleClick("Singles")} className="exhibitItems">
+          Single Photos
+        </p>
         {this.state.showSingles ? (
           <div>
             <ImageGallery
@@ -96,7 +100,7 @@ class Zuccheri extends Component {
             />
           </div>
         ) : null}
-        <p onClick={() => this.handleClick("EngPdf")}>
+        <p onClick={() => this.handleClick("EngPdf")} className="exhibitItems">
           Press Release (English)
         </p>
         {this.state.showEngPdf ? (
@@ -108,7 +112,9 @@ class Zuccheri extends Component {
             </Document>
           </div>
         ) : null}
-        <p onClick={() => this.handleClick("ItPdf")}>Press Release(Italiano)</p>
+        <p onClick={() => this.handleClick("ItPdf")} className="exhibitItems">
+          Press Release(Italiano)
+        </p>
         {this.state.showItPdf ? (
           <div>
             <Document file={itPdf} onLoadSuccess={this.onDocumentLoadSuccess}>
@@ -118,7 +124,12 @@ class Zuccheri extends Component {
             </Document>
           </div>
         ) : null}
-        <p onClick={() => this.handleClick("Checklist")}>Checklist</p>
+        <p
+          onClick={() => this.handleClick("Checklist")}
+          className="exhibitItems"
+        >
+          Checklist
+        </p>
 
         {this.state.showChecklist ? (
           <div>
