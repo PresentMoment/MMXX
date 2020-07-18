@@ -1,29 +1,29 @@
 {
   "files": {
-    "main.css": "presentmoment.github.io/MMXX/static/css/main.ac631016.chunk.css",
-    "main.js": "presentmoment.github.io/MMXX/static/js/main.6e23f6dd.chunk.js",
-    "main.js.map": "presentmoment.github.io/MMXX/static/js/main.6e23f6dd.chunk.js.map",
-    "runtime-main.js": "presentmoment.github.io/MMXX/static/js/runtime-main.69f7da9a.js",
-    "runtime-main.js.map": "presentmoment.github.io/MMXX/static/js/runtime-main.69f7da9a.js.map",
-    "static/css/2.47e06e2e.chunk.css": "presentmoment.github.io/MMXX/static/css/2.47e06e2e.chunk.css",
-    "static/js/2.a013dbb2.chunk.js": "presentmoment.github.io/MMXX/static/js/2.a013dbb2.chunk.js",
-    "static/js/2.a013dbb2.chunk.js.map": "presentmoment.github.io/MMXX/static/js/2.a013dbb2.chunk.js.map",
-    "index.html": "presentmoment.github.io/MMXX/index.html",
-    "precache-manifest.863de942597a27824075bb5378922281.js": "presentmoment.github.io/MMXX/precache-manifest.863de942597a27824075bb5378922281.js",
-    "service-worker.js": "presentmoment.github.io/MMXX/service-worker.js",
-    "static/css/2.47e06e2e.chunk.css.map": "presentmoment.github.io/MMXX/static/css/2.47e06e2e.chunk.css.map",
-    "static/css/main.ac631016.chunk.css.map": "presentmoment.github.io/MMXX/static/css/main.ac631016.chunk.css.map",
-    "static/js/2.a013dbb2.chunk.js.LICENSE.txt": "presentmoment.github.io/MMXX/static/js/2.a013dbb2.chunk.js.LICENSE.txt",
-    "static/media/Luigi.jpg": "presentmoment.github.io/MMXX/static/media/Luigi.271eebc9.jpg",
-    "static/media/checklist.pdf": "presentmoment.github.io/MMXX/static/media/checklist.79e20803.pdf",
-    "static/media/pr_eng.pdf": "presentmoment.github.io/MMXX/static/media/pr_eng.e78a5e08.pdf",
-    "static/media/pr_it.pdf": "presentmoment.github.io/MMXX/static/media/pr_it.f3a7a8bb.pdf"
+    "main.css": "/MMXX/static/css/main.ac631016.chunk.css",
+    "main.js": "/MMXX/static/js/main.ac3a5dbd.chunk.js",
+    "main.js.map": "/MMXX/static/js/main.ac3a5dbd.chunk.js.map",
+    "runtime-main.js": "/MMXX/static/js/runtime-main.a912ab4c.js",
+    "runtime-main.js.map": "/MMXX/static/js/runtime-main.a912ab4c.js.map",
+    "static/css/2.47e06e2e.chunk.css": "/MMXX/static/css/2.47e06e2e.chunk.css",
+    "static/js/2.2976a2c6.chunk.js": "/MMXX/static/js/2.2976a2c6.chunk.js",
+    "static/js/2.2976a2c6.chunk.js.map": "/MMXX/static/js/2.2976a2c6.chunk.js.map",
+    "index.html": "/MMXX/index.html",
+    "precache-manifest.2933095ea9a8650c4720be1a003e5094.js": "/MMXX/precache-manifest.2933095ea9a8650c4720be1a003e5094.js",
+    "service-worker.js": "/MMXX/service-worker.js",
+    "static/css/2.47e06e2e.chunk.css.map": "/MMXX/static/css/2.47e06e2e.chunk.css.map",
+    "static/css/main.ac631016.chunk.css.map": "/MMXX/static/css/main.ac631016.chunk.css.map",
+    "static/js/2.2976a2c6.chunk.js.LICENSE.txt": "/MMXX/static/js/2.2976a2c6.chunk.js.LICENSE.txt",
+    "static/media/Luigi.jpg": "/MMXX/static/media/Luigi.271eebc9.jpg",
+    "static/media/checklist.pdf": "/MMXX/static/media/checklist.79e20803.pdf",
+    "static/media/pr_eng.pdf": "/MMXX/static/media/pr_eng.e78a5e08.pdf",
+    "static/media/pr_it.pdf": "/MMXX/static/media/pr_it.f3a7a8bb.pdf"
   },
   "entrypoints": [
-    "static/js/runtime-main.69f7da9a.js",
+    "static/js/runtime-main.a912ab4c.js",
     "static/css/2.47e06e2e.chunk.css",
-    "static/js/2.a013dbb2.chunk.js",
+    "static/js/2.2976a2c6.chunk.js",
     "static/css/main.ac631016.chunk.css",
-    "static/js/main.6e23f6dd.chunk.js"
+    "static/js/main.ac3a5dbd.chunk.js"
   ]
 }
