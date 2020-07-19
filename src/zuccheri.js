@@ -67,7 +67,7 @@ class Zuccheri extends Component {
       <div className="content">
         <p>{this.props.title}</p>
         <p onClick={() => this.handleClick("Exhibit")} className="exhibitItems">
-          Exhibit Photos
+          Exhibit views
         </p>
         {this.state.showExhibit ? (
           <div>
@@ -84,7 +84,7 @@ class Zuccheri extends Component {
           </div>
         ) : null}
         <p onClick={() => this.handleClick("Singles")} className="exhibitItems">
-          Single Photos
+          Single works
         </p>
         {this.state.showSingles ? (
           <div>
@@ -100,8 +100,26 @@ class Zuccheri extends Component {
             />
           </div>
         ) : null}
+        <p
+          onClick={() => this.handleClick("Checklist")}
+          className="exhibitItems"
+        >
+          Checklist
+        </p>
+        {this.state.showChecklist ? (
+          <div>
+            <Document
+              file={checklist}
+              onLoadSuccess={this.onDocumentLoadSuccess}
+            >
+              {Array.from(new Array(this.state.numPages), (el, index) => (
+                <Page key={`page_${index + 1}`} pageNumber={index + 1} />
+              ))}
+            </Document>
+          </div>
+        ) : null}
         <p onClick={() => this.handleClick("EngPdf")} className="exhibitItems">
-          Press Release (English)
+          Press release ENG
         </p>
         {this.state.showEngPdf ? (
           <div>
@@ -113,30 +131,11 @@ class Zuccheri extends Component {
           </div>
         ) : null}
         <p onClick={() => this.handleClick("ItPdf")} className="exhibitItems">
-          Press Release(Italiano)
+          Press release ITA
         </p>
         {this.state.showItPdf ? (
           <div>
             <Document file={itPdf} onLoadSuccess={this.onDocumentLoadSuccess}>
-              {Array.from(new Array(this.state.numPages), (el, index) => (
-                <Page key={`page_${index + 1}`} pageNumber={index + 1} />
-              ))}
-            </Document>
-          </div>
-        ) : null}
-        <p
-          onClick={() => this.handleClick("Checklist")}
-          className="exhibitItems"
-        >
-          Checklist
-        </p>
-
-        {this.state.showChecklist ? (
-          <div>
-            <Document
-              file={checklist}
-              onLoadSuccess={this.onDocumentLoadSuccess}
-            >
               {Array.from(new Array(this.state.numPages), (el, index) => (
                 <Page key={`page_${index + 1}`} pageNumber={index + 1} />
               ))}
