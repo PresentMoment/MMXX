@@ -21,10 +21,22 @@ class Zuccheri extends Component {
       showItPdf: false,
       showChecklist: false,
       numPages: null,
+      window: "",
     };
 
     this.handleClick = this.handleClick.bind(this);
     this.onDocumentLoadSuccess = this.onDocumentLoadSuccess.bind(this);
+    this.screenSizeSwitch = this.screenSizeSwitch.bind(this);
+  }
+
+  componentDidMount() {
+    if (window.innerWidth < 425) {
+      this.setState({ window: "mobile" });
+    } else if (window.innerWidth < 625 && window.innerWidth >= 425) {
+      this.setState({ window: "small" });
+    } else if (window.innerWidth < 1000 && window.innerWidth >= 625) {
+      this.setState({ window: "medium" });
+    }
   }
 
   handleClick(x) {
@@ -44,6 +56,19 @@ class Zuccheri extends Component {
 
   onDocumentLoadSuccess({ numPages }) {
     this.setState({ numPages });
+  }
+
+  screenSizeSwitch(param) {
+    switch (param) {
+      case "medium":
+        return 600;
+      case "small":
+        return 400;
+      case "mobile":
+        return 300;
+      default:
+        return;
+    }
   }
 
   render(props) {
@@ -113,7 +138,11 @@ class Zuccheri extends Component {
               onLoadSuccess={this.onDocumentLoadSuccess}
             >
               {Array.from(new Array(this.state.numPages), (el, index) => (
-                <Page key={`page_${index + 1}`} pageNumber={index + 1} />
+                <Page
+                  key={`page_${index + 1}`}
+                  pageNumber={index + 1}
+                  width={this.screenSizeSwitch(this.state.window)}
+                />
               ))}
             </Document>
           </div>
@@ -125,7 +154,11 @@ class Zuccheri extends Component {
           <div>
             <Document file={engPdf} onLoadSuccess={this.onDocumentLoadSuccess}>
               {Array.from(new Array(this.state.numPages), (el, index) => (
-                <Page key={`page_${index + 1}`} pageNumber={index + 1} />
+                <Page
+                  key={`page_${index + 1}`}
+                  pageNumber={index + 1}
+                  width={this.screenSizeSwitch(this.state.window)}
+                />
               ))}
             </Document>
           </div>
@@ -137,7 +170,11 @@ class Zuccheri extends Component {
           <div>
             <Document file={itPdf} onLoadSuccess={this.onDocumentLoadSuccess}>
               {Array.from(new Array(this.state.numPages), (el, index) => (
-                <Page key={`page_${index + 1}`} pageNumber={index + 1} />
+                <Page
+                  key={`page_${index + 1}`}
+                  pageNumber={index + 1}
+                  width={this.screenSizeSwitch(this.state.window)}
+                />
               ))}
             </Document>
           </div>
