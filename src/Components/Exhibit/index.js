@@ -1,18 +1,19 @@
 import React, { Component } from "react";
 
 import ImageGallery from "react-image-gallery";
-
 import { Document, Page, pdfjs } from "react-pdf";
 
-import engPdf from "./assets/pr_eng.pdf";
-import itPdf from "./assets/pr_it.pdf";
-import checklist from "./assets/checklist.pdf";
+import worksDesc from "./worksDesc";
+import engPdf from "../../assets/pr_eng.pdf";
+import itPdf from "../../assets/pr_it.pdf";
+import checklist from "../../assets/checklist.pdf";
 
-import "./Styles/GalleryStyle.css";
+import "./styles.css";
+import "./GalleryStyle.css";
 pdfjs.GlobalWorkerOptions.workerSrc = `//cdnjs.cloudflare.com/ajax/libs/pdf.js/${pdfjs.version}/pdf.worker.js`;
 
-class Zuccheri extends Component {
-  constructor(props) {
+class Exhibit extends Component {
+  constructor() {
     super();
     this.state = {
       showExhibit: false,
@@ -71,28 +72,34 @@ class Zuccheri extends Component {
     }
   }
 
-  render(props) {
+  render() {
+    const artist = this.props.artist;
     let exhibit = new Array(13);
-    let singleworks = new Array(62);
+    let singleworks = new Array(55);
 
     for (let i = 0; i < exhibit.length; i++) {
       exhibit[i] = {
-        original: `./shows/zuccheri/exhibit/web/${i}.jpg`,
-        thumbnail: `./shows/zuccheri/exhibit/thumb/${i}.jpg`,
+        original: `./shows/${artist}/exhibit/web/${i}.jpg`,
+        thumbnail: `./shows/${artist}/exhibit/thumb/${i}.jpg`,
       };
     }
 
     for (let i = 0; i < singleworks.length; i++) {
       singleworks[i] = {
-        original: `./shows/zuccheri/singleworks/web/${i}.jpg`,
-        thumbnail: `./shows/zuccheri/singleworks/thumb/${i}.jpg`,
+        original: `./shows/${artist}/singleworks/web/${i}.jpg`,
+        thumbnail: `./shows/${artist}/singleworks/thumb/${i}.jpg`,
+        description: worksDesc[i],
+        originalAlt: worksDesc[i],
+        originalTitle: worksDesc[i],
       };
     }
     return (
       <div className="content">
-        <p>{this.props.title}</p>
+        <div className="exhibitTitle">
+          <p>{this.props.title}</p>
+        </div>
         <p onClick={() => this.handleClick("Exhibit")} className="exhibitItems">
-          Exhibit views
+          Exhibition views
         </p>
         {this.state.showExhibit ? (
           <div>
@@ -104,6 +111,7 @@ class Zuccheri extends Component {
               showPlayButton={false}
               showFullscreenButton={false}
               showThumbnails={true}
+              showNav={false}
               //onScreenChange={this.handleFullScreen}
             />
           </div>
@@ -121,6 +129,7 @@ class Zuccheri extends Component {
               showPlayButton={false}
               showFullscreenButton={false}
               showThumbnails={true}
+              showNav={false}
               //onScreenChange={this.handleFullScreen}
             />
           </div>
@@ -184,4 +193,4 @@ class Zuccheri extends Component {
   }
 }
 
-export default Zuccheri;
+export default Exhibit;

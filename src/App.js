@@ -1,18 +1,16 @@
 import React from "react";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { Link, BrowserRouter as Router, Switch, Route } from "react-router-dom";
 
 import "./App.css";
 
-import Home from "./Home";
-import Contact from "./Contact";
-import Exhibitions from "./Exhibitions";
-import Zuccheri from "./zuccheri";
+import Home from "./Components/Home";
+import Contact from "./Components/Contact/";
+import Exhibit from "./Components/Exhibit";
 
 function App() {
   return (
     <div>
-      <Router basename="MMXX">
+      <Router basename="/">
         <div className="navigation">
           <Link href="/" to="/">
             MMXX
@@ -31,13 +29,13 @@ function App() {
             <Contact />
           </Route>
           <Route path="/zuccheri">
-            <Zuccheri title={"Luigi Zuccheri 25.06 - 30.09.2020"} />
+            <Exhibit
+              title={"Luigi Zuccheri 25.06 - 30.09.2020"}
+              artist={"zuccheri"}
+            />
           </Route>
-          <Route path="/exhibition2">
-            <Exhibitions title={"Exhibition 2"} />
-          </Route>
-          <Route path="/exhibition3">
-            <Exhibitions title={"Exhibition 3"} />
+          <Route>
+            <Home />
           </Route>
         </Switch>
       </Router>

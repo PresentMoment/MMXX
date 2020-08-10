@@ -4,34 +4,6 @@ body {
   padding-top: 6vh;
 }
 
-.press {
-  background-color: transparent;
-  border: none;
-  border-radius: 0;
-  color: #000;
-  padding: none;
-}
-
-.press:focus {
-  background-color: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  color: #000 !important;
-  padding: none !important;
-}
-
-.press:hover {
-  background-color: transparent !important;
-  border: none !important;
-  box-shadow: none !important;
-  color: #000 !important;
-  padding: none !important;
-}
-
-.btn {
-  padding: 0;
-}
-
 .content {
   padding: 3rem 5vw;
 }
@@ -45,79 +17,9 @@ body {
   color: #000 !important;
 }
 
-.form-group {
-  width: 25%;
-}
-@media only screen and (max-width: 600px) {
-  .form-group {
-    width: 50%;
-  }
-}
-
-.form-control {
-  border-radius: 0 !important;
-  color: #000 !important;
-  border-color: #000 !important;
-}
-.form-control:focus {
-  border-color: #000 !important;
-  box-shadow: none !important;
-}
-
-.btn-primary {
-  background-color: transparent;
-  border: none;
-}
-
-.submit {
-  background-color: lightgrey;
-  border: none;
-  padding: 0.5rem 0.8rem;
-}
-
-.btn-success:active {
-  background-color: lightgrey !important;
-  border: none;
-}
-
-.imgSmall {
-  width: 25vw;
-}
-
-.ReactModal__Overlay {
-  top: 56px !important;
-}
-.ReactModal__Overlay--after-open {
-  top: 56px !important;
-}
-
-.dropdown-toggle:after {
-  display: none;
-}
-
-.navbar-nav .nav-link {
-  padding-right: 0 !important;
-  color: #000 !important;
-}
-
-.navbar {
-  padding-left: 5vw;
-}
-
-.navbar-brand {
-  font-size: 1em;
-  margin-right: 0 !important;
-  padding-top: 0.2125rem !important;
-  padding-bottom: 0.5565rem !important;
-}
-
-.navbar-toggler {
-  border-radius: 0 !important;
-}
-
 .navigation {
   padding-left: 5vw;
-  width: 188px;
+  width: 288px;
   display: inline-flex;
 }
 
@@ -128,12 +30,4 @@ body {
 
 .navSpacer {
   width: 2vw;
-}
-
-.exhibitImg img {
-  width: 50vw;
-}
-
-.exhibitItems {
-  cursor: pointer;
 }

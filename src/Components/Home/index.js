@@ -1,7 +1,9 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import Luigi from "./assets/Luigi.jpg";
+import "./styles.css";
+
+import Luigi from "../../assets/Luigi.jpg";
 
 function Home() {
   return (
