@@ -81,6 +81,7 @@ class Exhibit extends Component {
       exhibit[i] = {
         original: `./shows/${artist}/exhibit/web/${i}.jpg`,
         thumbnail: `./shows/${artist}/exhibit/thumb/${i}.jpg`,
+        credit: "DSL Studio",
       };
     }
 
@@ -89,6 +90,7 @@ class Exhibit extends Component {
         original: `./shows/${artist}/singleworks/web/${i}.jpg`,
         thumbnail: `./shows/${artist}/singleworks/thumb/${i}.jpg`,
         description: worksDesc[i],
+        credit: "DSL Studio",
         originalAlt: worksDesc[i],
         originalTitle: worksDesc[i],
       };
