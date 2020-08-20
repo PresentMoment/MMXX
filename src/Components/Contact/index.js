@@ -2,6 +2,8 @@ import React from "react";
 
 import MailchimpSubscribe from "react-mailchimp-subscribe";
 
+import "./styles.css";
+
 function Contact() {
   return (
     <div className="content">
@@ -23,6 +25,11 @@ function Contact() {
         url={
           "https://tumblr.us12.list-manage.com/subscribe/post?u=188da0c81d3a59e2d5bbae1fd&amp;id=5cbf52a839"
         }
+        render={() => (
+          <div>
+            <input type="text" placeholder="your email" />
+          </div>
+        )}
       />
     </div>
   );
