@@ -1,5 +1,11 @@
 import React from "react";
-import { Link, BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import {
+  Link,
+  HashRouter as Router,
+  Switch,
+  Redirect,
+  Route,
+} from "react-router-dom";
 
 import "./App.css";
 
@@ -37,6 +43,7 @@ function App() {
           <Route>
             <Home />
           </Route>
+          <Redirect from="/*" to="/" />
         </Switch>
       </Router>
     </div>
