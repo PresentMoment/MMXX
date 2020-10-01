@@ -1,5 +1,4 @@
 import React, { Component } from "react";
-
 import ImageGallery from "react-image-gallery";
 import { Document, Page, pdfjs } from "react-pdf";
 
@@ -114,6 +113,7 @@ class Exhibit extends Component {
               showFullscreenButton={false}
               showThumbnails={true}
               showNav={false}
+              lazyLoad={true}
               //onScreenChange={this.handleFullScreen}
             />
           </div>
@@ -132,6 +132,7 @@ class Exhibit extends Component {
               showFullscreenButton={false}
               showThumbnails={true}
               showNav={false}
+              lazyLoad={true}
               //onScreenChange={this.handleFullScreen}
             />
           </div>
