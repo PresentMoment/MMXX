@@ -43,7 +43,8 @@ class Exhibit extends Component {
 
   handleClick(x) {
     let currentTarget = "show" + x;
-    const scrollTarget = document.getElementById("content");
+    const scrollTarget = document.getElementById(`${x}`);
+    console.log(scrollTarget);
     if (currentTarget === "showExhibit") {
       this.setState({ showExhibit: !this.state.showExhibit });
     } else if (currentTarget === "showSingles") {
@@ -57,7 +58,7 @@ class Exhibit extends Component {
     }
     scrollTarget.scrollIntoView({
       behavior: "smooth",
-      block: "nearest",
+      block: "start",
     });
   }
 
@@ -110,108 +111,130 @@ class Exhibit extends Component {
       };
     }
     return (
-      <div className="content" id="content">
+      <div className="content">
         <div className="exhibitTitle">
           <p>{this.props.title}</p>
         </div>
-        <p onClick={() => this.handleClick("Exhibit")} className="exhibitItems">
-          Exhibition views
-        </p>
-        {this.state.showExhibit ? (
-          <div>
-            <ImageGallery
-              items={exhibit}
-              infinite={true}
-              showBullets={false}
-              disableThumbnailScroll={false}
-              showPlayButton={false}
-              showFullscreenButton={false}
-              showThumbnails={true}
-              showNav={false}
-              lazyLoad={true}
-              onImageLoad={this.handleLoad}
-              onBeforeSlide={this.handleSwipe}
-              isLoaded={this.state.loaded}
-              //onScreenChange={this.handleFullScreen}
-            />
-          </div>
-        ) : null}
-        <p onClick={() => this.handleClick("Singles")} className="exhibitItems">
-          Single works
-        </p>
-        {this.state.showSingles ? (
-          <div>
-            <ImageGallery
-              items={singleworks}
-              infinite={true}
-              showBullets={false}
-              disableThumbnailScroll={false}
-              showPlayButton={false}
-              showFullscreenButton={false}
-              showThumbnails={true}
-              showNav={false}
-              lazyLoad={true}
-              onImageLoad={this.handleLoad}
-              onBeforeSlide={this.handleSwipe}
-              isLoaded={this.state.loaded}
-              //onScreenChange={this.handleFullScreen}
-            />
-          </div>
-        ) : null}
-        <p
-          onClick={() => this.handleClick("Checklist")}
-          className="exhibitItems"
-        >
-          Checklist
-        </p>
-        {this.state.showChecklist ? (
-          <div>
-            <Document
-              file={checklist}
-              onLoadSuccess={this.onDocumentLoadSuccess}
-            >
-              {Array.from(new Array(this.state.numPages), (el, index) => (
-                <Page
-                  key={`page_${index + 1}`}
-                  pageNumber={index + 1}
-                  width={this.screenSizeSwitch(this.state.window)}
-                />
-              ))}
-            </Document>
-          </div>
-        ) : null}
-        <p onClick={() => this.handleClick("EngPdf")} className="exhibitItems">
-          Press release ENG
-        </p>
-        {this.state.showEngPdf ? (
-          <div>
-            <Document file={engPdf} onLoadSuccess={this.onDocumentLoadSuccess}>
-              {Array.from(new Array(this.state.numPages), (el, index) => (
-                <Page
-                  key={`page_${index + 1}`}
-                  pageNumber={index + 1}
-                  width={this.screenSizeSwitch(this.state.window)}
-                />
-              ))}
-            </Document>
-          </div>
-        ) : null}
-        <p onClick={() => this.handleClick("ItPdf")} className="exhibitItems">
-          Press release ITA
-        </p>
-        {this.state.showItPdf ? (
-          <div>
-            <Document file={itPdf} onLoadSuccess={this.onDocumentLoadSuccess}>
-              {Array.from(new Array(this.state.numPages), (el, index) => (
-                <Page
-                  key={`page_${index + 1}`}
-                  pageNumber={index + 1}
-                  width={this.screenSizeSwitch(this.state.window)}
-                />
-              ))}
-            </Document>
-          </div>
-        ) : null}
+        <div id="Exhibit">
+          <p
+            onClick={() => this.handleClick("Exhibit")}
+            className="exhibitItems"
+          >
+            Exhibition views
+          </p>
+          {this.state.showExhibit ? (
+            <div>
+              <ImageGallery
+                items={exhibit}
+                infinite={true}
+                showBullets={false}
+                disableThumbnailScroll={false}
+                showPlayButton={false}
+                showFullscreenButton={false}
+                showThumbnails={true}
+                showNav={false}
+                lazyLoad={true}
+                onImageLoad={this.handleLoad}
+                onBeforeSlide={this.handleSwipe}
+                isLoaded={this.state.loaded}
+                //onScreenChange={this.handleFullScreen}
+              />
+            </div>
+          ) : null}
+        </div>
+        <div id="Singles">
+          <p
+            onClick={() => this.handleClick("Singles")}
+            className="exhibitItems"
+          >
+            Single works
+          </p>
+          {this.state.showSingles ? (
+            <div>
+              <ImageGallery
+                items={singleworks}
+                infinite={true}
+                showBullets={false}
+                disableThumbnailScroll={false}
+                showPlayButton={false}
+                showFullscreenButton={false}
+                showThumbnails={true}
+                showNav={false}
+                lazyLoad={true}
+                onImageLoad={this.handleLoad}
+                onBeforeSlide={this.handleSwipe}
+                isLoaded={this.state.loaded}
+                //onScreenChange={this.handleFullScreen}
+              />
+            </div>
+          ) : null}
+        </div>
+        <div id="Checklist">
+          <p
+            onClick={() => this.handleClick("Checklist")}
+            className="exhibitItems"
+          >
+            Checklist
+          </p>
+          {this.state.showChecklist ? (
+            <div>
+              <Document
+                file={checklist}
+                onLoadSuccess={this.onDocumentLoadSuccess}
+              >
+                {Array.from(new Array(this.state.numPages), (el, index) => (
+                  <Page
+                    key={`page_${index + 1}`}
+                    pageNumber={index + 1}
+                    width={this.screenSizeSwitch(this.state.window)}
+                  />
+                ))}
+              </Document>
+            </div>
+          ) : null}
+        </div>
+        <div id="EngPdf">
+          <p
+            onClick={() => this.handleClick("EngPdf")}
+            className="exhibitItems"
+          >
+            Press release ENG
+          </p>
+          {this.state.showEngPdf ? (
+            <div>
+              <Document
+                file={engPdf}
+                onLoadSuccess={this.onDocumentLoadSuccess}
+              >
+                {Array.from(new Array(this.state.numPages), (el, index) => (
+                  <Page
+                    key={`page_${index + 1}`}
+                    pageNumber={index + 1}
+                    width={this.screenSizeSwitch(this.state.window)}
+                  />
+                ))}
+              </Document>
+            </div>
+          ) : null}
+        </div>
+        <div id="ItPdf">
+          <p onClick={() => this.handleClick("ItPdf")} className="exhibitItems">
+            Press release ITA
+          </p>
+          {this.state.showItPdf ? (
+            <div>
+              <Document file={itPdf} onLoadSuccess={this.onDocumentLoadSuccess}>
+                {Array.from(new Array(this.state.numPages), (el, index) => (
+                  <Page
+                    key={`page_${index + 1}`}
+                    pageNumber={index + 1}
+                    width={this.screenSizeSwitch(this.state.window)}
+                  />
+                ))}
+              </Document>
+            </div>
+          ) : null}
+        </div>
       </div>
     );
   }
