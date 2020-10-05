@@ -22,9 +22,11 @@ class Exhibit extends Component {
       showChecklist: false,
       numPages: null,
       window: "",
+      loaded: false,
     };
-
+    this.handleSwipe = this.handleSwipe.bind(this);
     this.handleClick = this.handleClick.bind(this);
+    this.handleLoad = this.handleLoad.bind(this);
     this.onDocumentLoadSuccess = this.onDocumentLoadSuccess.bind(this);
     this.screenSizeSwitch = this.screenSizeSwitch.bind(this);
   }
@@ -52,6 +54,14 @@ class Exhibit extends Component {
     } else if (currentTarget === "showChecklist") {
       this.setState({ showChecklist: !this.state.showChecklist });
     }
+  }
+
+  handleSwipe() {
+    this.setState({ loaded: false });
+  }
+
+  handleLoad(event) {
+    this.setState({ loaded: true });
   }
 
   onDocumentLoadSuccess({ numPages }) {
@@ -114,6 +124,9 @@ class Exhibit extends Component {
               showThumbnails={true}
               showNav={false}
               lazyLoad={true}
+              onImageLoad={this.handleLoad}
+              onBeforeSlide={this.handleSwipe}
+              isLoaded={this.state.loaded}
               //onScreenChange={this.handleFullScreen}
             />
           </div>
@@ -133,6 +146,9 @@ class Exhibit extends Component {
               showThumbnails={true}
               showNav={false}
               lazyLoad={true}
+              onImageLoad={this.handleLoad}
+              onBeforeSlide={this.handleSwipe}
+              isLoaded={this.state.loaded}
               //onScreenChange={this.handleFullScreen}
             />
           </div>
