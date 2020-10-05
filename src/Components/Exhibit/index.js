@@ -43,6 +43,7 @@ class Exhibit extends Component {
 
   handleClick(x) {
     let currentTarget = "show" + x;
+    const scrollTarget = document.getElementById("content");
     if (currentTarget === "showExhibit") {
       this.setState({ showExhibit: !this.state.showExhibit });
     } else if (currentTarget === "showSingles") {
@@ -54,6 +55,10 @@ class Exhibit extends Component {
     } else if (currentTarget === "showChecklist") {
       this.setState({ showChecklist: !this.state.showChecklist });
     }
+    scrollTarget.scrollIntoView({
+      behavior: "smooth",
+      block: "nearest",
+    });
   }
 
   handleSwipe() {
@@ -105,7 +110,7 @@ class Exhibit extends Component {
       };
     }
     return (
-      <div className="content">
+      <div className="content" id="content">
         <div className="exhibitTitle">
           <p>{this.props.title}</p>
         </div>
